@@ -76,6 +76,7 @@ cd monolith-to-microservices
 echo "build monolith block"
 ./setup.sh > /dev/null 2>&1 || true # Игнорируем ошибки setup.sh, если он уже настроен
 
+cd monolith
 echo -e "${GREEN}[INFO] Building Monolith v1...${NC}"
 gcloud builds submit --tag gcr.io/${PROJECT_ID}/${MONO_ID}:1.0.0 .
 
